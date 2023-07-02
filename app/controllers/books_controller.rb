@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+   def new
+    @books = books,new
+   end
 
    def index
       # Viewへ渡すためのインスタンス変数に空のModelオブジェクトを生成する。
@@ -16,6 +19,7 @@ class BooksController < ApplicationController
           redirect_to book_path(@book.id) #セーブできた時
        else
            @books=Book.all
+
            render :index
        end
    end

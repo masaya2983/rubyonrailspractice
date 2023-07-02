@@ -34,7 +34,7 @@
 </table>
 
     <% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved
+  <%= @book.errors.count %>件のerrが発生しました
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
